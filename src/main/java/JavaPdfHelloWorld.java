@@ -9,11 +9,11 @@ import com.itextpdf.text.pdf.PdfWriter;
         public static void main(String[] args)
         {
             Document document = new Document();
-            try
-            {
+            try {
                 PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("HelloWorld.pdf"));
                 document.open();
-                document.add(new Paragraph("A Hello World PDF document."));
+                //TODO Vyriešiť diakritiku pri exporte
+                document.add(new Paragraph("A Hello World PDF document.lščtťľ"));
                 document.close();
                 writer.close();
             } catch (DocumentException e)
